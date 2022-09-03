@@ -34,7 +34,7 @@ The program can run external Unix commands that are installed on the system. Her
 >> false && echo Hello && false || cal
 
 ```
-## Snapshots
+## Example run without and with debug
 
 ```bash
 ***********************************************************
