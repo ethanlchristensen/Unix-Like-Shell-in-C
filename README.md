@@ -36,6 +36,8 @@ The program can run external Unix commands that are installed on the system. Her
 ```
 ## Example run without and with debug
 
+### Without
+
 ```bash
 ***********************************************************
 * This is a simple shell made by Ethan Christensen for    *
@@ -89,6 +91,60 @@ Su Mo Tu We Th Fr Sa
 18 19 20 21 22 23 24
 25 26 27 28 29 30
 
+>>
+```
+### With
+
+```bash
+***********************************************************
+* This is a simple shell made by Ethan Christensen for    *
+* CSCI4500 at the Univerity of Nebrasaka at Omaha. This   *
+* shell aims to emulate the a UNIX-type shell but only    *
+* for external commands, and not commands that are built  *
+* into the system. This is meant to be a simple shell and *
+* is not meant to emulate every command on a UNIX-type    *
+* shell.                                                  *
+*                                                         *
+* Author: Ethan Christensen                               *
+* Resources: Professor Jose Santos                        *
+***********************************************************
+>> false && echo Hello && false || cal
+
+readline(): Got: "false && echo Hello && false || cal" (rval = 34)
+***************************DEBUG***************************
+Job #0: "false && echo Hello && false || cal"
+        seqops = [ 1 1 2 ]
+        Simple Command #0 = "false "
+               path:       /usr/bin/false
+               cmd:        "false"
+               args:       (None supplied)
+*************************END-DEBUG*************************
+seqops[0]: 1
+CHILD STATUS: 256
+        Simple Command #2 = " false "
+               path:       /usr/bin/false
+               cmd:        "false"
+               args:       (None supplied)
+*************************END-DEBUG*************************
+seqops[2]: 2
+CHILD STATUS: 256
+        Simple Command #3 = " cal"
+               path:       /usr/bin/cal
+               cmd:        "cal"
+               args:       (None supplied)
+*************************END-DEBUG*************************
+   September 2022
+Su Mo Tu We Th Fr Sa
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30
+
+seqops[3]: 0
+CHILD STATUS: 0
+
+>>
 ```
 
 ## Have Fun :)
