@@ -4,7 +4,7 @@ This program mimics a Unix-like shell. It is created with C and is meant to run 
 
 Some chunks of code are commented out. These were meant to act as debuguing agents. You can uncomment them to get a better understanding on how the program processes incoming commands.
 
-**UPDATE:** debug mode currently does not work, uncommenting out debug statements is not recommended.
+**UPDATE:** debug mode currently does not work, uncommenting out debug statements is **NOT** recommended.
 
 To exit out of the shell, you must `ctrl + c`
 
